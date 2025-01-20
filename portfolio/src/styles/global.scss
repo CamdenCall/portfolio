@@ -1,0 +1,13 @@
+@use './var.scss' as var;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--dm-sans);
+}
+
+
+.gradient {
+    background-image: var.$gradient-angle;
+    color: transparent;
+    background-clip: text;
+}
