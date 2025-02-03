@@ -1,0 +1,40 @@
+@use "../../styles/_var.scss" as var;
+
+.languages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    flex-direction: column;
+    padding: 0px 50px 0px 50px;
+
+    .badges {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+        grid-template-rows: repeat(3, auto);
+        gap: 5px;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .badge {
+            flex: 1 1 0px;
+            padding: 0px 50px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background-color: var.$dark;
+            border: 1px solid var.$stroke;
+            transition: border 0.35s ease-in-out;
+
+            &:hover {
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+}
