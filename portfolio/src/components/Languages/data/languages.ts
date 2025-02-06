@@ -30,7 +30,7 @@ export const data = {
         },
         {
             name: "Tailwind",
-            image: "images/Badges/tailwind.svg"
+            image: "images/Badges/tailwind.png"
         },
         {
             name: "Sass",

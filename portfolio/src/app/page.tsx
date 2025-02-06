@@ -3,6 +3,7 @@ import Header from "@/components/Header/Header";
 import Experience from "@/components/Experience/Experience";
 import Projects from "@/components/Projects/Projects";
 import Languages from "@/components/Languages/Languages";
+import Socials from "@/components/Socials/Socials";
 import PageWrapper from "@/components/Wrapper/PageWrapper";
 import { Metadata } from "next";
 import "@/styles/global.scss"
@@ -32,6 +33,7 @@ export default function Home() {
           <Experience />
           <Projects />
           <Languages />
+          <Socials />
         </PageWrapper>
       </body>
     </html>

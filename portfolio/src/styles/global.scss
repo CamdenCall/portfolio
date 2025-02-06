@@ -40,6 +40,16 @@ h3 {
     background-clip: text;
     display: inline-block;
 }
+
+.blue {
+    color: var.$blue;
+}
+.red {
+    color: var.$red;
+}
+.yellow {
+    color: var.$yellow;
+}
 p {
     color: white;
 }

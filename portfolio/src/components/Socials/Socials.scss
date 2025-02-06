@@ -1,0 +1,72 @@
+@use '../../styles/var' as var;
+.socials {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    gap: 50px;
+    .header {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .stars {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .socials-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0px 25px;
+        align-items: center;
+        .line {
+            width: 100%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .social-links {
+            display: flex;
+            width: 100%;
+            gap: 100px;
+            max-width: 1200px;
+            padding: 0px 50px;
+        }
+
+        .social-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+
+            .spacer {
+                height: 100px;
+                width: 1px;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            .social {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                background-color: var.$dark;
+                border: 1px solid var.$stroke;
+                align-items: center;
+                padding: 25px;
+                width: 100%;
+                max-width: 200px;
+                cursor: pointer;
+                transition: border 0.35s ease-in-out;
+
+                &:hover {
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                }
+                
+            }
+        }
+    }
+}
