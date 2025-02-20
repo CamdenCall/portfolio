@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   title: "Camden C.",
   description: "UI/UX Designer & Fullstack Web Developer",
   openGraph: {
-    images: ['/images/profile.png'],
+    images: ['images/profile.png'],
   },
   icons: [
-    { rel: "icon", url: "/images/favicon.png" },
+    { rel: "icon", url: "images/favicon.png" },
   ],
   keywords: ["Camden C.", "Web Developer", "UI/UX Designer", "Fullstack Developer", "Utah Web Developer", "Freelancer", "Portfolio"],
   metadataBase: new URL("https://camdev.codes")
