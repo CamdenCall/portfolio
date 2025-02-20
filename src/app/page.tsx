@@ -17,7 +17,8 @@ export const metadata: Metadata = {
   icons: [
     { rel: "icon", url: "/images/favicon.png" },
   ],
-  keywords: ["Camden C.", "Web Developer", "UI/UX Designer", "Fullstack Developer", "Utah Web Developer", "Freelancer", "Portfolio"]
+  keywords: ["Camden C.", "Web Developer", "UI/UX Designer", "Fullstack Developer", "Utah Web Developer", "Freelancer", "Portfolio"],
+  metadataBase: new URL("https://camdev.codes")
 }
 
 const dm_sans = DM_Sans({
@@ -29,15 +30,13 @@ const dm_sans = DM_Sans({
 
 export default function Home() {
   return (
-    <html className={dm_sans.className}>
-      <body>
-        <Header />
-        <Experience />
-        <Projects />
-        <Languages />
-        <Socials />
-        <Footer />
-      </body>
-    </html>
+    <>
+      <Header />
+      <Experience />
+      <Projects />
+      <Languages />
+      <Socials />
+      <Footer />
+    </>
   );
 }
