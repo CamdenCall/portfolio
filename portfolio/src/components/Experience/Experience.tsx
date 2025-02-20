@@ -1,13 +1,28 @@
+"use client";
 import "./Experience.scss";
+import { motion } from "motion/react"
 
 
 export default function Experience() {
   return (
-    <section className="experience" id="experience">
+    <motion.section
+     initial={{ opacity: 0, y: 15 }}
+     whileInView={{ opacity: 1, y: 0 }}
+     transition={{ duration: 0.75, ease: "easeIn" }}
+     viewport={{ once: true }}
+     className="experience"
+     id="experience"
+    >
         <img src="images/fingerprint.png" alt="fingerprint" className="fingerprint" />
         <h2>Experience</h2>
-        <div className="xp-cards">
+        <motion.div
+         initial={{ opacity: 0, y: 15 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.75, ease: "easeIn" }}
+         viewport={{ once: true }}
+         className="xp-cards">
             <div className="line"></div>
+            
             <div className="card">
                 <div className="card-header">
                     <img src="/images/mtech.png" alt="mtech logo" />
@@ -71,8 +86,8 @@ export default function Experience() {
                     </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </motion.div>
+    </motion.section>
 
   );
 }

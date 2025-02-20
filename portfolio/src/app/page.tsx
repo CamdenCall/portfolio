@@ -4,17 +4,20 @@ import Experience from "@/components/Experience/Experience";
 import Projects from "@/components/Projects/Projects";
 import Languages from "@/components/Languages/Languages";
 import Socials from "@/components/Socials/Socials";
-import PageWrapper from "@/components/Wrapper/PageWrapper";
+import Footer from "@/components/Footer/Footer";
 import { Metadata } from "next";
 import "@/styles/global.scss"
 
 export const metadata: Metadata = {
-  title: "Camden C. | Web Developer",
+  title: "Camden C.",
   description: "UI/UX Designer & Fullstack Web Developer",
+  openGraph: {
+    images: ['/images/profile.png'],
+  },
   icons: [
     { rel: "icon", url: "/images/favicon.png" },
-    { rel: "apple-touch-icon", url: "/apple-touch-icon.png" },
   ],
+  keywords: ["Camden C.", "Web Developer", "UI/UX Designer", "Fullstack Developer", "Utah Web Developer", "Freelancer", "Portfolio"]
 }
 
 const dm_sans = DM_Sans({
@@ -28,13 +31,12 @@ export default function Home() {
   return (
     <html className={dm_sans.className}>
       <body>
-        <PageWrapper>
-          <Header />
-          <Experience />
-          <Projects />
-          <Languages />
-          <Socials />
-        </PageWrapper>
+        <Header />
+        <Experience />
+        <Projects />
+        <Languages />
+        <Socials />
+        <Footer />
       </body>
     </html>
   );

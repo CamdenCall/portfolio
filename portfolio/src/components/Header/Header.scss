@@ -13,6 +13,7 @@ header {
     margin: 0 auto;
     position: relative;
     animation: fadeIn 1s ease-in-out;
+    overflow: hidden;
 
     &::before {
         content: "";
@@ -29,15 +30,17 @@ header {
         align-items: center;
         gap: 10px;
         z-index: 2;
+        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 
         .logo {
             width: 25px;
             margin-bottom: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);   
         }
     }
     .portrait {
         position: absolute;
-        right: -25px;
+        right: -50px;
         bottom: 0;
         height: 500px;
         width: auto;
@@ -53,7 +56,6 @@ header {
 
 .grid-container {
     display: grid;
-    grid-template-rows: repeat(auto-fill, 50px);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -61,16 +63,55 @@ header {
     top: 0;
     left: 0;
     z-index: 2;
-  }
+}
 .block {
     width: 50px;
     height: 50px;
 
     &.color {
-        backdrop-filter: hue-rotate(90deg);
+        backdrop-filter: hue-rotate(100deg);
     }
     &:hover {
         background-color: rgba(0,0,0, 0.2);
-        backdrop-filter: hue-rotate(90deg);
+        backdrop-filter: hue-rotate(100deg);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .portrait {
+        right: -100px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header{
+        padding: 50px 25px;
+        &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    }
+    .portrait {
+        right: -135px !important;
+        opacity: 0.7 !important;
+        bottom: -50px !important;
+        height: 500px !important;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .header {
+        height: 500px;
+    }
+    .portrait {
+        right: -175px !important;
+        opacity: 0.7 !important;
+        bottom: -150px !important;
+        height: 500px !important;
     }
 }

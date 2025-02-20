@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Loading from "@/components/Loading/Loading";
 
 export default function PageWrapper({ children }: { children: React.ReactNode }) {
+  /*
   const [loading, setLoading] = useState(true);
   
   useEffect(() => {
@@ -17,6 +18,7 @@ export default function PageWrapper({ children }: { children: React.ReactNode })
   if (loading) {
     return <Loading />;
   }
+    */
 
   return <>{children}</>;
 }

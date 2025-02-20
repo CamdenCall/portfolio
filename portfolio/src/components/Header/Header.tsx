@@ -33,46 +33,31 @@ export default function Header() {
 
   useEffect(() => {
     const blocks = document.querySelectorAll(".block");
-    if (blocks.length === 0) return;
-
-    blocks.forEach(block => {
-      if (block) {
-        block.classList.add("color");
-      }
-    });
-
+  
     const removeRandomColorClass = () => {
-      const blocksArray = Array.from(blocks).filter(block => block);
-      if (blocksArray.length === 0) return;
-
-      const randomIndex = Math.floor(Math.random() * blocksArray.length);
-      if (blocksArray[randomIndex].classList.contains("color")) {
-        blocksArray[randomIndex].classList.remove("color");
-      } else {
-        removeRandomColorClass();
-      }
-
-      const anyBlockHasColor = blocksArray.some(block => block.classList.contains("color"));
-      if (!anyBlockHasColor) {
+      const blocksArray = Array.from(blocks).filter(block => block.classList.contains("color"));
+      if (blocksArray.length === 0) {
         clearInterval(interval);
+        return;
       }
+  
+      const randomIndex = Math.floor(Math.random() * blocksArray.length);
+      blocksArray[randomIndex].classList.remove("color");
     };
-
-    const interval = setInterval(removeRandomColorClass, 10);
-
-    return () => {
-      clearInterval(interval);
-    };
+  
+    const interval = setInterval(removeRandomColorClass, 7); // Increased delay for stability
+  
+    return () => clearInterval(interval);
   }, [numBlocks]);
 
 
   return (
-    <header className="header">
+    <header className="header" id="top">
       <div className="grid-container" style={{ gridTemplateColumns: `repeat(auto-fill, minmax(${blockSize.width}px, 1fr))` }}>
       {Array.from({ length: numBlocks }).map((_, index) => (
           <div
             key={index}
-            className="block"
+            className="block color"
             style={{ width: blockSize.width, height: blockSize.height }}
           ></div>
         ))}
@@ -80,7 +65,7 @@ export default function Header() {
       <div className="header-text">
         <img src="/images/logo.png" className="logo" alt="logo"/>
         <h1 className="gradient">CAMDEN C.</h1>
-        <p className="s18">UI/UX Desinger & Fullstack Web Developer</p>
+        <p className="s18 center">UI/UX Desinger & Fullstack Web Developer</p>
       </div>
       <img src="images/portrait.png" alt="portrait" className="portrait" />
       <a href="#experience">

@@ -1,0 +1,80 @@
+@use "../../styles/var" as var;
+
+footer {
+    background-color: var.$dark;
+    height: 350px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        padding: 50px 50px 25px 50px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        height: 100%;
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+
+                .left-top {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                
+                }
+                .left-bottom {
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+
+            .right {
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                cursor: pointer;
+                text-decoration: none;
+                margin-top: 5px;
+            }
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 35px !important;
+    }
+}
+
+@media screen and (max-width: 458px) {
+    footer {
+        height: 250px;
+        .container {
+            padding: 25px 15px 25px 15px !important;
+        }
+    }
+    .left {
+        height: auto !important;
+        gap: 25px;
+        flex: 1;
+        
+
+    }
+    .top {
+        flex-direction: column-reverse;
+        flex-wrap: wrap-reverse;
+        gap: 25px;
+        align-items: flex-end !important;
+        
+    }
+}

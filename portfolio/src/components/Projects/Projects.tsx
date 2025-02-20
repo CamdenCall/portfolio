@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { motion } from "motion/react"
 import "./Projects.scss";
 import { data } from "./data/projects";
 
@@ -25,7 +26,7 @@ export default function Projects() {
         setCurrentProject((currentProject + 1) % projects.length);
         setTimeout(() => {
             setFade(false);
-        }, 500);
+        }, 1000);
     }
 
     const prevProject = () => {
@@ -33,14 +34,20 @@ export default function Projects() {
         setCurrentProject((currentProject - 1 + projects.length) % projects.length);
         setTimeout(() => {
             setFade(false);
-        }, 500);
+        }, 1000);
     }
     useEffect(() => {
         setProjects(data.projects);
     }, []);
 
     return (
-    <section className="projects">
+    <motion.section
+     initial={{ opacity: 0, y: 15 }}
+     whileInView={{ opacity: 1, y: 0 }}
+     transition={{ duration: 0.75, ease: "easeIn" }}
+     viewport={{ once: true }}
+     className="projects"
+    >
     <div className="projects-header">
         <h2>Projects</h2>
         <div className="line"></div>
@@ -64,7 +71,11 @@ export default function Projects() {
                 <div className="project-header">
                     <div className="project-info">
                         <h3 className="s16 italic w500">{projects[currentProject].name}</h3>
-                        <div className="tags">
+                        <a href={projects[currentProject].link} target="_blank" rel="noreferrer" className="link">
+                            <img src="images/open-link.svg" alt="open link" />
+                        </a>
+                    </div>
+                    <div className="tags">
                             {projects[currentProject].tags.map((tag, index) => (
                             <div className="tag" key={index}>
                                 <img src={tag.image} alt="project tag" />
@@ -72,10 +83,6 @@ export default function Projects() {
                             </div>
                             ))}
                         </div>
-                    </div>
-                    <a href={projects[currentProject].link} target="_blank" rel="noreferrer">
-                        <img src="images/open-link.svg" alt="open link" className="link" />
-                    </a>
                 </div>
                 <div className="project-preview">
                     <img src={projects[currentProject].preview} alt="website preview"/>
@@ -83,7 +90,7 @@ export default function Projects() {
             </div>
         </div>
     )}
-    </section>
+    </motion.section>
 
   );
 }

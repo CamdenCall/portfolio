@@ -21,6 +21,10 @@ export const data = {
             image: "images/Badges/react.png"
         },
         {
+            name: "Next.js",
+            image: "images/Badges/next.svg"
+        },
+        {
             name: "Tsx",
             image: "images/Badges/ts.svg"
         },
@@ -59,6 +63,10 @@ export const data = {
         {
             name: "Docker",
             image: "images/Badges/docker.svg"
+        },
+        {
+            name: "Sanity",
+            image: "images/Badges/sanity.png"
         },
         
     ]
