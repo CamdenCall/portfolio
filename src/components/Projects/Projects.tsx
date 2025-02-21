@@ -17,7 +17,7 @@ interface Project {
   }
 
 export default function Projects() {
-    const [projects, setProjects] = useState<Project[]>([]);
+    const [projects, setProjects] = useState<Project[]>(data.projects);
     const [currentProject, setCurrentProject] = useState(0);
     const [fade, setFade] = useState(false);
 
@@ -36,9 +36,6 @@ export default function Projects() {
             setFade(false);
         }, 1000);
     }
-    useEffect(() => {
-        setProjects(data.projects);
-    }, []);
 
     return (
     <motion.section

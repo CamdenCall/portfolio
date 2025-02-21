@@ -1,4 +1,3 @@
-import { DM_Sans } from "next/font/google"
 import Header from "@/components/Header/Header";
 import Experience from "@/components/Experience/Experience";
 import Projects from "@/components/Projects/Projects";
@@ -21,10 +20,6 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://camdev.codes")
 }
 
-const dm_sans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--dm-sans",
-})
 
 
 

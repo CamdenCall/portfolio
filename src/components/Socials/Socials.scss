@@ -108,7 +108,7 @@
 @media screen and (max-width: 600px) {
     .socials {
         gap: 25px;
-        padding-bottom: 100px;
+        padding-bottom: 100px !important;
     }
     .social-links {
         flex-direction: column;

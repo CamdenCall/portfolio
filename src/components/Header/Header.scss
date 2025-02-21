@@ -115,3 +115,10 @@ header {
         height: 500px !important;
     }
 }
+
+@media screen and (max-width: 430px) {
+    .header {
+        height: 100vh;
+        padding: 75px 15px;
+    }
+}
