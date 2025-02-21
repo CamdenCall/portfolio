@@ -17,21 +17,21 @@ interface Project {
   }
 
 export default function Projects() {
-    const [projects, setProjects] = useState<Project[]>(data.projects);
+    const projects = data.projects
     const [currentProject, setCurrentProject] = useState(0);
     const [fade, setFade] = useState(false);
 
     const nextProject = () => {
-        setFade(true);
         setCurrentProject((currentProject + 1) % projects.length);
+        setFade(true);
         setTimeout(() => {
             setFade(false);
         }, 1000);
     }
 
     const prevProject = () => {
-        setFade(true);
         setCurrentProject((currentProject - 1 + projects.length) % projects.length);
+        setFade(true);
         setTimeout(() => {
             setFade(false);
         }, 1000);
