@@ -29,7 +29,7 @@ export const data = {
             image: "images/Badges/angular.svg"
         },
         {
-            name: "Tsx",
+            name: "Ts",
             image: "images/Badges/ts.svg"
         },
         {
@@ -55,6 +55,14 @@ export const data = {
         {
             name: "MySQL",
             image: "images/Badges/sql.png"
+        },
+        {
+            name: "PostgreSQL",
+            image: "images/Badges/postgres.png"
+        },
+        {
+            name: "MongoDB",
+            image: "images/Badges/mongo.svg"
         },
         {
             name: "AWS",
