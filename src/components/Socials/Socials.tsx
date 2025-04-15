@@ -50,7 +50,7 @@ export default function Socials() {
                 </div>
                 <div className="social-container">
                     <div className="spacer"></div>
-                    <a className="social" href="/resume/resume.pdf"download="camden_resume">
+                    <a className="social" href="/resume/Camden-Resume.pdf" download="Camden-Resume.pdf">
                         <img src="/images/Socials/resume.svg" alt="resume" />
                         <p className="s12 w500">Resume</p>
                     </a>

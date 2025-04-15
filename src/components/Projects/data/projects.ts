@@ -1,6 +1,16 @@
 export const data = {
     projects: [
         {
+            name: "Laced.bio (Comming Soon)",
+            tags: [
+                {name: "Custom Design", image: "images/Projects/Tags/custom.svg"},
+                {name: "React", image: "images/Projects/Tags/react.png"},
+                {name: "PostgreSQL", image: "images/Projects/Tags/postgres.png"}
+            ],
+            preview: "images/Projects/Previews/laced.png",
+            link: "#"
+        },
+        {
             name: "Hilarity",
             tags: [
                 {name: "Custom Design", image: "images/Projects/Tags/custom.svg"},

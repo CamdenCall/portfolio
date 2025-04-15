@@ -30,11 +30,11 @@ export default function Experience() {
                 </div>
                 <div className="card-info">
                     <p className="s16 w500">Web Programming & Development Student</p>
-                    <p className="s14 w300">
+                    <p className="s16 w300">
                         Studied: Source Control, HTML, CSS, Bootstrap, and Sass. 
                         Focused primarily on JavaScript, TypeScript, Angular, and React. 
                     </p>
-                    <p className="s14 w300">
+                    <p className="s16 w300">
                     The program also covers back-end essentials: servers, databases,
                      hosting, deployment, security, and automated QA. 
                     </p>
@@ -47,11 +47,11 @@ export default function Experience() {
                 </div>
                 <div className="card-info">
                     <p className="s16 w500">Freelance Website Developer</p>
-                    <p className="s14 w300">
-                        I have designed and developed websites for over 12 clients, creating custom solutions that fit their needs.
+                    <p className="s16 w300">
+                    Designed and developed custom websites for over 15 clients, creating custom solutions to fit their needs.
                     </p>
-                    <p className="s14 w300">
-                        I have implemented custom designs, responsive layouts, cms systems, forms, and backend functionality to create purposeful and dynamic web experiences.
+                    <p className="s16 w300">
+                        Implemented custom designs, responsive layouts, cms systems, forms, and backend functionality to create purposeful and dynamic web experiences.
                     </p>
                 </div>
             </div>
@@ -62,11 +62,11 @@ export default function Experience() {
                 </div>
                 <div className="card-info">
                     <p className="s16 w500">Side Projects</p>
-                    <p className="s14 w300">
-                        I have built various personal and hobby projects to expand my skills in different programming languages.
+                    <p className="s16 w300">
+                        Developed various personal and hobby projects to expand my skills in different programming languages.
                     </p>
-                    <p className="s14 w300">
-                    My most significant project, Laced.bio, was developed entirely from scratch. I designed a custom UI/UX for the site and implemented both the frontend and backend logic. 
+                    <p className="s16 w300">
+                    My most significant project, Laced.bio, is developed and designed by me. I designed the custom UI/UX for the site and implemented both the frontend and backend. 
                     </p>
                 </div>
             </div>
@@ -77,10 +77,10 @@ export default function Experience() {
                 </div>
                 <div className="card-info">
                     <p className="s16 w500">Web Development Pathway</p>
-                    <p className="s14 w300">
+                    <p className="s16 w300">
                         4.0 GPA
                     </p>
-                    <p className="s14 w300">
+                    <p className="s16 w300">
                     Completed the Web Development CTE pathway by successfully passing Web Development 1 & 2,
                     Computer Programming 1 & 2, and Advanced Computer Programming
                     </p>

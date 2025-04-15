@@ -20,6 +20,23 @@ export default function Projects() {
     const projects = data.projects
     const [currentProject, setCurrentProject] = useState(0);
     const [fade, setFade] = useState(false);
+    const [preloaded, setPreloaded] = useState(false);
+
+    useEffect(() => {
+        const preloadImages = async () => {
+            const promises = projects.map((project) => {
+                return new Promise<void>((resolve) => {
+                    const img = new Image();
+                    img.src = project.preview;
+                    img.onload = () => resolve();
+                });
+            });
+            await Promise.all(promises);
+            setPreloaded(true);
+        };
+
+        preloadImages();
+    }, [projects]);
 
     const nextProject = () => {
         setCurrentProject((currentProject + 1) % projects.length);
@@ -62,7 +79,7 @@ export default function Projects() {
             </div>
         </div>
     </div>
-    {projects.length > 0 && (
+    {preloaded && projects.length > 0 && (
         <div className="project">
             <div className={`project-container ${fade ? 'fade-in' : ''}`}>
                 <div className="project-header">

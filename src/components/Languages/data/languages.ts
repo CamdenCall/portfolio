@@ -25,6 +25,10 @@ export const data = {
             image: "images/Badges/next.svg"
         },
         {
+            name: "Angular",
+            image: "images/Badges/angular.svg"
+        },
+        {
             name: "Tsx",
             image: "images/Badges/ts.svg"
         },
