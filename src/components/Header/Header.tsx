@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import "./Header.scss";
 
 
@@ -45,7 +46,7 @@ export default function Header() {
       blocksArray[randomIndex].classList.remove("color");
     };
   
-    const interval = setInterval(removeRandomColorClass, 7); // Increased delay for stability
+    const interval = setInterval(removeRandomColorClass, 5); // Increased delay for stability
   
     return () => clearInterval(interval);
   }, [numBlocks]);
@@ -63,11 +64,11 @@ export default function Header() {
         ))}
       </div>
       <div className="header-text">
-        <img src="/images/logo.png" className="logo" alt="logo"/>
+        <Image src="/images/logo.png" width={25} height={26} className="logo" alt="logo"/>
         <h1 className="gradient">CAMDEN C.</h1>
         <p className="s18 center">UI/UX Desinger & Fullstack Web Developer</p>
       </div>
-      <img src="images/portrait.png" alt="portrait" className="portrait" />
+      <Image src="/images/portrait.png" alt="portrait" width={565} height={600} className="portrait" />
       <a href="#experience">
         <img src="images/star-arrow.svg" alt="arrow" className="arrow"/>
       </a>
