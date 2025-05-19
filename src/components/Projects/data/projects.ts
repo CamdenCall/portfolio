@@ -4,8 +4,8 @@ export const data = {
             name: "Laced.bio",
             tags: [
                 {name: "Custom Design", image: "images/Projects/Tags/custom.svg"},
-                {name: "React", image: "images/Projects/Tags/react.webp"},
-                {name: "PostgreSQL", image: "images/Projects/Tags/postgres.webp"},
+                {name: "React", image: "images/Projects/Tags/react.png"},
+                {name: "PostgreSQL", image: "images/Projects/Tags/postgres.png"},
                 {name: "AWS", image: "images/Projects/Tags/aws.svg"}
             ],
             preview: "images/Projects/Previews/laced.webp",
@@ -15,7 +15,7 @@ export const data = {
             name: "Hilarity",
             tags: [
                 {name: "Custom Design", image: "images/Projects/Tags/custom.svg"},
-                {name: "React", image: "images/Projects/Tags/react.webp"}
+                {name: "React", image: "images/Projects/Tags/react.png"}
             ],
             preview: "images/Projects/Previews/hilarity.webp",
             link: "https://hilarity.io"
@@ -25,7 +25,7 @@ export const data = {
             tags: [
                 {name: "Custom Design", image: "images/Projects/Tags/custom.svg"},
                 {name: "Webflow", image: "images/Projects/Tags/webflow.svg"},
-                {name: "React", image: "images/Projects/Tags/react.webp"}
+                {name: "React", image: "images/Projects/Tags/react.png"}
             ],
             preview: "images/Projects/Previews/nka.webp",
             link: "https://nka-tax.netlify.app/"
